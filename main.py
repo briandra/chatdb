@@ -21,7 +21,7 @@ try:
     host=os.environ["db_host"],
     user=os.environ["db_user"],
     password=os.environ["db_password"],
-    database=os.environ["db_name"]
+    database=os.environ["db_name"],
     table_name=os.environ["table_name"]
 )
     # Create a cursor object to interact with the database
