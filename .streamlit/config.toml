@@ -1,0 +1,9 @@
+[server]
+headless = true
+
+[client]
+showErrorDetails = false
+
+[theme]
+base="dark"
+primaryColor="#FFFFFF"
