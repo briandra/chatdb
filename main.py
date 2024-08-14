@@ -2,6 +2,9 @@ import os
 import streamlit as st 
 import mysql.connector
 import pandas as pd
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # App framework
 st.set_page_config(page_title='ChatToDB', layout = 'centered', page_icon = 'logo.png', initial_sidebar_state = 'auto')
@@ -18,14 +21,14 @@ with st.sidebar:
 try:
     #Connecting to the Database
     connection = mysql.connector.connect(
-    #host=os.environ["db_host"],
-    #user=os.environ["db_user"],
-    #password=os.environ["db_password"],
-    #database=os.environ["db_name"],
-    host='sql12.freesqldatabase.com',
-    user='sql12725382',
-    password='XaNwncKXdH',
-    database='sql12725382'
+    host=os.environ["db_host"],
+    user=os.environ["db_user"],
+    password=os.environ["db_password"],
+    database=os.environ["db_name"],
+    #host='sql12.freesqldatabase.com',
+    #user='sql12725382',
+    #password='XaNwncKXdH',
+    #database='sql12725382'
 )
     # Create a cursor object to interact with the database
     cursor = connection.cursor()
