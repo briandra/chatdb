@@ -57,3 +57,8 @@ try:
     
 except Exception as e:
     st.write("⚠️ Sorry, Couldn't establish a connection to the Database")
+
+finally:
+    # Close the connection
+    if connection.is_connected():
+        connection.close()
