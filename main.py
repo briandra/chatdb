@@ -2,9 +2,6 @@ import os
 import streamlit as st 
 import mysql.connector
 import pandas as pd
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # App framework
 st.set_page_config(page_title='ChatToDB', layout = 'centered', page_icon = 'logo.png', initial_sidebar_state = 'auto')
