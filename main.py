@@ -22,7 +22,7 @@ st.markdown("""
 #Table selector
 table_name = st.selectbox(
     "Choose a table from the database: showing the first 50 rows",
-    ('orders','returns','people'))
+    ('transactions','DIPA','saldo kas'))
 
 #Using Try Catch
 try:
@@ -41,8 +41,8 @@ try:
     cursor = connection.cursor()
 
     # Define the SQL query you want to execute
-    # query = f"SELECT * FROM {table_name} LIMIT 50"
-    query = f"SELECT * FROM transactions LIMIT 50"
+    query = f"SELECT * FROM {table_name} LIMIT 50"
+    # query = f"SELECT * FROM transactions LIMIT 50"
 
     # Execute the query
     cursor.execute(query)
