@@ -1,9 +1,8 @@
 streamlit
 langchain
-python-dotenv==1.0.0
-streamlit==1.28.0
-tiktoken==0.4.0
-faiss-cpu==1.7.4
+python-dotenv
+tiktoken
+faiss-cpu
 protobuf
 google-generativeai
 langchain_experimental
