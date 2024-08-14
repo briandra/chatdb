@@ -24,7 +24,7 @@ try:
     #database=os.environ["db_name"],
     host='sql12.freesqldatabase.com',
     user='sql12725382',
-    password=o'XaNwncKXdH',
+    password='XaNwncKXdH',
     database='sql12725382'
 )
     # Create a cursor object to interact with the database
