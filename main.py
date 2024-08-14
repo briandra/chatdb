@@ -18,10 +18,14 @@ with st.sidebar:
 try:
     #Connecting to the Database
     connection = mysql.connector.connect(
-    host=os.environ["db_host"],
-    user=os.environ["db_user"],
-    password=os.environ["db_password"],
-    database=os.environ["db_name"],
+    #host=os.environ["db_host"],
+    #user=os.environ["db_user"],
+    #password=os.environ["db_password"],
+    #database=os.environ["db_name"],
+    host='sql12.freesqldatabase.com',
+    user='sql12725382',
+    password=o'XaNwncKXdH',
+    database='sql12725382'
 )
     # Create a cursor object to interact with the database
     cursor = connection.cursor()
