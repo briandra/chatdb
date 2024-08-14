@@ -13,9 +13,19 @@ with st.sidebar:
     st.markdown(
         """
         This chatbot to answer questions about the financial data, regulation,
-        and transactiob in the ministry of finance of Indonesia system.
+        and transaction in the ministry of finance of Indonesia system.
         """
     )
+
+st.title("Chat to Database Dashboard")
+
+st.markdown("""
+        Chat to Database Dashboard is a chatbot with the ability to answer the question related to the dataset.""")
+
+#Table selector
+table_name = st.selectbox(
+    "Choose a table from the database: showing the first 50 rows",
+    ('orders','returns','people'))
 
 #Using Try Catch
 try:
