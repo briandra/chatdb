@@ -7,7 +7,7 @@ from sql_generator import get_df
 #The Main Function
 def main():
 
-    st.set_page_config(page_title="Chat to Database Q&A",  layout="wide", page_icon="🤖")
+    st.set_page_config(page_title="Chat to Database Q&A", layout="wide", initial_sidebar_state="collapsed", page_icon="🤖")
     st.title("Chat to Database Q&A 🤖")
 
     #Chat Window
