@@ -7,13 +7,13 @@ from sql_generator import get_df
 #The Main Function
 def main():
 
-    st.set_page_config(page_title="Text To SQL",page_icon="")
-    st.title("SuperStore Database Q&A 🏪")
+    st.set_page_config(page_title="Chat to Database Q&A",page_icon="🤖")
+    st.title("Chat to Database Q&A 🤖")
 
     #Chat Window
     
     with st.chat_message("assistant"):
-        st.write("Please go ahead and Query your Database: e.g. What are the top 5 sub-categories with the highest sales?")
+        st.write("Please go ahead and Query your Database: e.g. How much is the Goods Expenditure of the Kementerian Pertahanan in 2023?")
     
     #Initializing Mwessage history
     if "messages" not in st.session_state:
@@ -77,7 +77,7 @@ def main():
 
         except Exception as e:
             #st.write(e)
-            error_message = "⚠️ Sorry, Couldn't generate the SQL Query! Please try rephrasing your question"
+            error_message = "⚠️ Sorry, Couldn't generate the answer! Please try rephrasing your question"
             #Displaying the error message
             with st.chat_message("assistant"):  
                 st.text(error_message)
@@ -89,14 +89,8 @@ def main():
     
     #Side Menu Bar
     with st.sidebar:
-        st.title("Configuration:⚙️")
-        st.write("Check the Database Overview tab to learn more about the data and the possible questions you may want answered!")
-
-        
-        
-
-
-
+        st.title("Setting:⚙️")
+        st.write("Check the Database Connection before running the program!")
     
     #Function to clear history
     def clear_chat_history():
@@ -104,8 +98,6 @@ def main():
     #Button for clearing history
     st.sidebar.button("Clear Chat History",on_click=clear_chat_history)
 
-    
-    
     #Button
 
 
